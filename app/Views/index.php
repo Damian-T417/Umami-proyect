@@ -649,7 +649,7 @@
                 <!--.social-icons-->
             </div>
             <!--.footer-content-->
-            <p class="copy-info">Copyright 2021 © by Umami Ramen & Sushi</p>
+            <p class="copy-info">Copyright 2022 © by Umami Ramen & Sushi</p>
         </div>
         <!--.container-->
     </footer>
