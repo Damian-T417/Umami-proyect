@@ -2,11 +2,21 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Controller;
+use App\Models\Menu;
+use App\Models\Categorias;
+
 class Home extends BaseController
 {
     public function index()
     {
-        return view('index');
+        $platillos = new Menu();
+        $categorias = new Categorias();
+
+        //$datos['platillos'] = $platillos->orderBy('idPlatillo','ASC')->findAll();
+        $datos['platillos'] = $platillos;
+        $datos['categorias'] = $categorias->orderBy('idCategoria','ASC')->findAll();
+        return view('index', $datos);
     }
 
     public function dashboard()

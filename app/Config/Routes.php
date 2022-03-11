@@ -35,7 +35,7 @@ $routes->setAutoRoute(true);
 //Menú
 $routes->get('/', 'Home::index');
 
-//Usuarios
+//Usuario admin
 $routes->get('/signup', 'SignupController::index');
 $routes->get('/signin', 'SigninController::index');
 

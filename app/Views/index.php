@@ -276,305 +276,61 @@
             </div>
             <!--.divider-->
             <ul class="menu-navigation" data-tabs data-match-height="true" id="example-tabs">
-                <li class="tabs-title is-active"><a class="m-anim" href="#panel1" aria-selected="true" data-text="Starters">Starters</a></li>
+
+            <?php foreach($categorias as $categoria): ?>
+
+                <li class="tabs-title"><a class="m-anim" data-tabs-target="panel<?= $categoria['idCategoria'] ?>" href="#panel<?= $categoria['idCategoria'] ?>" data-text="<?= $categoria['nombreCat'] ?>"><?= $categoria['nombreCat'] ?></a></li>
+
+            <?php endforeach; ?>
+            <!--
+                <li class="tabs-title "><a class="m-anim" href="#panel1" aria-selected="true" data-text="Starters">Starters</a></li>
                 <li class="tabs-title"><a class="m-anim" data-tabs-target="panel2" href="#panel2" data-text="Main Dishes">Main Dishes</a></li>
                 <li class="tabs-title"><a class="m-anim" data-tabs-target="panel3" href="#panel3" data-text="Desserts">Desserts</a></li>
                 <li class="tabs-title"><a class="m-anim" data-tabs-target="panel4" href="#panel4" data-text="Drinks">Drinks</a></li>
+            -->
             </ul>
 
             <div class="tabs-content" data-tabs-content="example-tabs">
-                <div class="tabs-panel is-active" id="panel1">
+
+            <?php foreach($categorias as $categoria): ?>
+
+                <div class="tabs-panel" id="panel<?= $categoria['idCategoria'] ?>">
+
+                <?php $platillo = $platillos->where('idCategoria',$categoria['idCategoria'])->findAll(); ?>
+
+                <?php foreach($platillo as $menu): ?>
                     <div class="menu-content">
                         <div class="menu-section">
                             <table>
                                 <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
+                                    <td><span><?= $menu['nombrePlatillo']; ?></span></td>
                                     <td><span>$12</span></td>
                                 </tr>
                                 <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
+                                    <td><?= $menu['descripcion']; ?></td>
                                 </tr>
-                                <tr>
-                                    <td><span>SAMPHIRE FRITTERS WITH FENNEL CEVICHE </span></td>
-                                    <td><span>$19</span></td>
-                                </tr>
-                                <tr>
-                                    <td>fresh samphire, plain flour, cornflower, eggs, fennel</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$13</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$16</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
+           
                             </table>
                         </div>
                         <!--.menu-section-->
                         <div class="menu-section">
                             <table>
                                 <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                                <tr>
                                     <td><span>SAMPHIRE FRITTERS WITH FENNEL CEVICHE </span></td>
                                     <td><span>$19</span></td>
                                 </tr>
                                 <tr>
                                     <td>fresh samphire, plain flour, cornflower, eggs, fennel</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$13</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$16</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
                                 </tr>
                             </table>
                         </div>
                         <!--.menu-section-->
                     </div>
                     <!--.menu-content-->
+                <?php endforeach; ?>
                 </div>
+            <?php endforeach; ?>    
                 <!--#panel1-->
-
-                <div class="tabs-panel" id="panel2">
-                    <div class="menu-content">
-                        <div class="menu-section">
-                            <table>
-                                <tr>
-                                    <td><span>SAMPHIRE FRITTERS WITH FENNEL CEVICHE </span></td>
-                                    <td><span>$19</span></td>
-                                </tr>
-                                <tr>
-                                    <td>fresh samphire, plain flour, cornflower, eggs, fennel</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$13</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$16</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--.menu-section-->
-                        <div class="menu-section">
-                            <table>
-                                <tr>
-                                    <td><span>SAMPHIRE FRITTERS WITH FENNEL CEVICHE </span></td>
-                                    <td><span>$19</span></td>
-                                </tr>
-                                <tr>
-                                    <td>fresh samphire, plain flour, cornflower, eggs, fennel</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$13</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$16</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--.menu-section-->
-                    </div>
-                    <!--.menu-content-->
-                </div>
-                <!--#panel2-->
-
-                <div class="tabs-panel" id="panel3">
-                    <div class="menu-content">
-                        <div class="menu-section">
-                            <table>
-
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>COURGETTE FLOWERS</span></td>
-                                    <td><span>$16</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--.menu-section-->
-                        <div class="menu-section">
-                            <table>
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                                <tr>
-                                    <td><span>PAN FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>FRIED COURGETTE FLOWERS</span></td>
-                                    <td><span>$16</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--.menu-section-->
-                    </div>
-                    <!--.menu-content-->
-                </div>
-                <!--#panel3-->
-
-                <div class="tabs-panel" id="panel4">
-                    <div class="menu-content">
-                        <div class="menu-section">
-                            <table>
-                                <tr>
-                                    <td><span>COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--.menu-section-->
-                        <div class="menu-section">
-                            <table>
-                                <tr>
-                                    <td><span>COURGETTE FLOWERS</span></td>
-                                    <td><span>$11</span></td>
-                                </tr>
-                                <tr>
-                                    <td>courgette flowers, goats cheese, red onion, pine nuts</td>
-                                </tr>
-                                <tr>
-                                    <td><span>SMOKED RICOTTA TERRINE</span></td>
-                                    <td><span>$12</span></td>
-                                </tr>
-                                <tr>
-                                    <td>ricotta, shallots, cheddar, capers</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--.menu-section-->
-                    </div>
-                    <!--.menu-content-->
-                </div>
-                <!--#panel4-->
 
             </div>
         </div>
