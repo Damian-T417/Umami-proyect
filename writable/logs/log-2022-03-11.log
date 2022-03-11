@@ -25,3 +25,31 @@ CRITICAL - 2022-03-11 02:16:07 --> Call to a member function getFirstRow() on bo
 #5 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #7 {main}
+CRITICAL - 2022-03-11 02:44:28 --> adminGuard filter must have a matching alias defined.
+#0 C:\xampp\htdocs\Umami-Proyect\system\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('adminGuard')
+#1 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(377): CodeIgniter\Filters\Filters->enableFilter('adminGuard', 'before')
+#2 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-11 02:45:11 --> adminGuard filter must have a matching alias defined.
+#0 C:\xampp\htdocs\Umami-Proyect\system\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('adminGuard')
+#1 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(377): CodeIgniter\Filters\Filters->enableFilter('adminGuard', 'before')
+#2 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-11 02:47:14 --> adminGuard filter must have a matching alias defined.
+#0 C:\xampp\htdocs\Umami-Proyect\system\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('adminGuard')
+#1 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(377): CodeIgniter\Filters\Filters->enableFilter('adminGuard', 'before')
+#2 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-11 02:48:21 --> adminGuard filter must have a matching alias defined.
+#0 C:\xampp\htdocs\Umami-Proyect\system\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('adminGuard')
+#1 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(377): CodeIgniter\Filters\Filters->enableFilter('adminGuard', 'before')
+#2 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

@@ -19,17 +19,17 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="backend/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/backend/assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="backend/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>/backend/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="backend/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="backend/assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="<?= base_url(); ?>/backend/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="<?= base_url(); ?>/backend/assets/extra-libs/sparkline/sparkline.js"></script>
     <!--Wave Effects -->
-    <script src="backend/dist/js/waves.js"></script>
+    <script src="<?= base_url(); ?>/backend/dist/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="backend/dist/js/sidebarmenu.js"></script>
+    <script src="<?= base_url(); ?>/backend/dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="backend/dist/js/custom.min.js"></script>
+    <script src="<?= base_url(); ?>/backend/dist/js/custom.min.js"></script>
   </body>
 </html>

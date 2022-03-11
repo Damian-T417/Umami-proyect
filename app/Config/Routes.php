@@ -44,7 +44,12 @@ $routes->get('/signin', 'SigninController::index');
 $routes->get('/dashboard', 'Home::dashboard',['filter' => 'authGuard']);
 
 //Categorias
-$routes->get('/dashboard/categoria', 'CategoriasController::listar',['filter' => 'authGuard']);
+$routes->get('/dashboard/categorias', 'CategoriasController::listar',['filter' => 'authGuard']);
+$routes->get('/dashboard/categorias/crear', 'CategoriasController::crear', ['filter' => 'authGuard']);
+$routes->post('/dashboard/categorias/guardar', 'CategoriasController::guardar', ['filter' => 'authGuard']);
+$routes->get('/dashboard/categorias/editar/(:num)', 'CategoriasController::editar/$1', ['filter' => 'authGuard']);
+$routes->post('/dashboard/categorias/actualizar', 'CategoriasController::actualizar', ['filter' => 'authGuard']);
+$routes->get('/dashboard/categorias/borrar/(:num)', 'CategoriasController::borrar/$1', ['filter' => 'authGuard']);
 
 //Menu
 $routes->get('/dashboard/menu', 'MenuController::listar',['filter' => 'authGuard']);

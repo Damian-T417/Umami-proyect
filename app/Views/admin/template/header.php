@@ -9,14 +9,10 @@
         <meta name="robots" content="noindex,nofollow" />
         <title>Umami Ramen & Sushi - Administración</title>
         <!-- Favicon icon -->
-        <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="assets/img/icon.png"
+        <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url(); ?>/assets/img/icon.png"
         />
         <!-- Custom CSS -->
-        <link href="backend/dist/css/style.min.css" rel="stylesheet" />
+        <link href="<?= base_url(); ?>/backend/dist/css/style.min.css" rel="stylesheet" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -56,13 +52,13 @@
                 <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
-                <a class="navbar-brand" href="<?php echo base_url(); ?>/dashboard">
+                <a class="navbar-brand" href="<?= base_url(); ?>/dashboard">
                 <!-- Logo icon -->
                 <b class="logo-icon ps-2">
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
                     <img
-                    src="assets/img/logo-black.png"
+                    src="<?= base_url(); ?>/assets/img/logo-black.png"
                     alt="homepage"
                     class="light-logo"
                     width="25"
@@ -73,7 +69,7 @@
                 <span class="logo-text ms-2">
                     <!-- dark Logo text -->
                     <img
-                    src="assets/img/logo-white.png"
+                    src="<?= base_url(); ?>/assets/img/logo-white.png"
                     alt="homepage"
                     class="light-logo center"
                     width="75%"
@@ -150,7 +146,7 @@
                     class="dropdown-menu dropdown-menu-end user-dd animated"
                     aria-labelledby="navbarDropdown">
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url(); ?>/signinController/logout">
+                    <a class="dropdown-item" href="<?= base_url(); ?>/signinController/logout">
                         <i class="fa fa-power-off me-1 ms-1"></i> Cerrar sesión</a>
                     </ul>
                 </li>
@@ -177,7 +173,7 @@
                 <li class="sidebar-item">
                     <a
                     class="sidebar-link waves-effect waves-dark sidebar-link"
-                    href="<?php echo base_url(); ?>/dashboard"
+                    href="<?= base_url(); ?>/dashboard"
                     aria-expanded="false"
                     ><i class="mdi mdi-view-dashboard"></i
                     ><span class="hide-menu">Dashboard</span></a
@@ -186,7 +182,7 @@
                 <li class="sidebar-item">
                     <a
                     class="sidebar-link waves-effect waves-dark sidebar-link"
-                    href="<?php echo base_url(); ?>/dashboard/categoria"
+                    href="<?= base_url(); ?>/dashboard/categorias"
                     aria-expanded="false"
                     ><i class="mdi mdi-note-outline"></i
                     ><span class="hide-menu">Categoría</span></a
@@ -204,7 +200,7 @@
                 <li class="sidebar-item">
                     <a
                     class="sidebar-link waves-effect waves-dark sidebar-link"
-                    href="<?php echo base_url(); ?>/dashboard/promociones"
+                    href="<?= base_url(); ?>/dashboard/promociones"
                     aria-expanded="false"
                     ><i class="mdi mdi-bookmark"></i
                     ><span class="hide-menu">Promociones</span></a
