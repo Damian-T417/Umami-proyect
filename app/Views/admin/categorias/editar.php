@@ -1,8 +1,17 @@
 <?= $header ?>
 
-    <!-- ============================================================== -->
-    <!-- Start Page Content -->
-    <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+            <h2 class="page-title"> <i class="fa fa-archive"></i> Categorias</h2>
+            <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?=base_url('/dashboard/categorias');?>" class="btn btn-warning rounded-pill">Regresar <i class="fa fa-undo"> </i></a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
 
     <?php if(session('mensaje')){?>
         <div class="alert alert-danger" role="alert">

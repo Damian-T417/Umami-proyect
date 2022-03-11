@@ -29,11 +29,11 @@ class CategoriasController extends Controller{
     {
         $categoria = new categorias();
 
-        $validacion = $this->validate([
+        $rules = $this->validate([
             'nombreC'=>'required|min_length[4]',
         ]);
 
-        if(!$validacion){
+        if(!$rules){
             $sessions = session();
             $sessions->setFlashData('mensaje', 'Faltan datos por agregar');
 
@@ -67,10 +67,10 @@ class CategoriasController extends Controller{
         ];
         $idCategoria = $this->request->getVar('idCategoria');
 
-        $validacion = $this->validate([
+        $rules = $this->validate([
             'nombreC'=>'required|min_length[6]',
         ]);
-        if(!$validacion){
+        if(!$rules){
             $sessions = session();
             $sessions->setFlashData('mensaje', 'Faltan datos por agregar');
 

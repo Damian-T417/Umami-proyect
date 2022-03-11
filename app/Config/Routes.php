@@ -36,11 +36,10 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 //Usuarios
-//$routes->get('/', 'SignupController::index');
 $routes->get('/signup', 'SignupController::index');
 $routes->get('/signin', 'SigninController::index');
 
-//Admin view
+//Admin
 $routes->get('/dashboard', 'Home::dashboard',['filter' => 'authGuard']);
 
 //Categorias
@@ -53,6 +52,11 @@ $routes->get('/dashboard/categorias/borrar/(:num)', 'CategoriasController::borra
 
 //Menu
 $routes->get('/dashboard/menu', 'MenuController::listar',['filter' => 'authGuard']);
+$routes->get('/dashboard/menu/crear', 'MenuController::crear', ['filter' => 'authGuard']);
+$routes->post('/dashboard/menu/guardar', 'MenuController::guardar', ['filter' => 'authGuard']);
+$routes->get('/dashboard/menu/editar/(:num)', 'MenuController::editar/$1', ['filter' => 'authGuard']);
+$routes->post('/dashboard/menu/actualizar', 'MenuController::actualizar', ['filter' => 'authGuard']);
+$routes->get('/dashboard/menu/borrar/(:num)', 'MenuController::borrar/$1', ['filter' => 'authGuard']);
 
 //Promociones
 $routes->get('/dashboard/promociones', 'PromocionesController::listar',['filter' => 'authGuard']);
