@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>The login is worth it</h1>
-    <p>Press <a href="#">this button</a> for signout</p>
+    <p>Press <a href="<?php echo base_url(); ?>/SigninController/logout">this button</a> for signout</p>
 </body>
 </html>

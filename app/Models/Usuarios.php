@@ -8,7 +8,7 @@ class Usuarios extends Model{
     // Uncomment below if you want add primary key
     protected $primaryKey = 'idUsuario';
     protected $allowedFields = [
-        'nombre',
+        'nombreUsuario',
         'password',
         'created_at'
     ];

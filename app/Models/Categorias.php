@@ -7,5 +7,5 @@ class Categorias extends Model{
     protected $table      = 'categorias';
     // Uncomment below if you want add primary key
     protected $primaryKey = 'idCategoria';
-    protected $allowedFields = ['nombre'];
+    protected $allowedFields = ['nombreCat'];
 }

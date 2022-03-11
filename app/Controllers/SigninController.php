@@ -16,11 +16,11 @@ class SigninController extends Controller{
     public function loginAuth()
     {
         $session = session();
-        $user = new Usuarios();
+        $usuario = new Usuarios();
         $name = $this->request->getVar('nombre');
         $password = $this->request->getVar('password');
         
-        $data = $user->where('nombre', $name)->first();
+        $data = $usuario->where('nombreUsuario', $name)->first();
         
         if($data){
             $pass = $data['password'];
@@ -28,11 +28,11 @@ class SigninController extends Controller{
             if($authenticatePassword){
                 $ses_data = [
                     'id' => $data['idUsuario'],
-                    'name' => $data['nombre'],
+                    'name' => $data['nombreUsuario'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/profile');
+                return redirect()->to('/dashboard');
             
             }else{
                 $session->setFlashdata('msg', 'Password is incorrect.');
@@ -42,6 +42,13 @@ class SigninController extends Controller{
             $session->setFlashdata('msg', 'Name does not exist.');
             return redirect()->to('/signin');
         }
+    }
+
+    public function logout()
+    {
+        $session = session();
+        $session->destroy();
+        return redirect()->to('/signin');
     }
 
 }

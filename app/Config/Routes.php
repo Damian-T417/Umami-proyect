@@ -36,15 +36,21 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 //Usuarios
-//$routes->get('signin/', 'UsuariosController::index');
-
-// custom routes
-$routes->get('/', 'SignupController::index');
+//$routes->get('/', 'SignupController::index');
 $routes->get('/signup', 'SignupController::index');
 $routes->get('/signin', 'SigninController::index');
-$routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
 
+//Admin view
+$routes->get('/dashboard', 'Home::dashboard',['filter' => 'authGuard']);
 
+//Categorias
+$routes->get('/dashboard/categoria', 'CategoriasController::listar',['filter' => 'authGuard']);
+
+//Menu
+$routes->get('/dashboard/menu', 'MenuController::listar',['filter' => 'authGuard']);
+
+//Promociones
+$routes->get('/dashboard/promociones', 'PromocionesController::listar',['filter' => 'authGuard']);
 
 /*
  * --------------------------------------------------------------------

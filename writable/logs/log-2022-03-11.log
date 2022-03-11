@@ -1,0 +1,27 @@
+CRITICAL - 2022-03-11 01:32:04 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\Umami-Proyect\app\Controllers\Home.php on line 10
+#0 C:\xampp\htdocs\Umami-Proyect\app\Controllers\Home.php(10): view('index', NULL)
+#1 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-11 01:32:31 --> Argument 2 passed to view() must be of the type array, null given, called in C:\xampp\htdocs\Umami-Proyect\app\Controllers\Home.php on line 9
+#0 C:\xampp\htdocs\Umami-Proyect\app\Controllers\Home.php(9): view('index', NULL)
+#1 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-11 02:12:07 --> Unknown column 'nombre' in 'field list'
+ERROR - 2022-03-11 02:16:06 --> Unknown column 'nombre' in 'where clause'
+CRITICAL - 2022-03-11 02:16:07 --> Call to a member function getFirstRow() on bool
+#0 C:\xampp\htdocs\Umami-Proyect\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#1 C:\xampp\htdocs\Umami-Proyect\app\Controllers\SigninController.php(23): CodeIgniter\BaseModel->first()
+#2 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(825): App\Controllers\SigninController->loginAuth()
+#3 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SigninController))
+#4 C:\xampp\htdocs\Umami-Proyect\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Umami-Proyect\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Umami-Proyect\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}

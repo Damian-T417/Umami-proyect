@@ -25,7 +25,7 @@ class SignupController extends Controller{
         if($this->validate($rules)){
             $user = new Usuarios();
             $data = [
-                'nombre'     => $this->request->getVar('name'),
+                'nombreUsuario' => $this->request->getVar('name'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
             $user->save($data);

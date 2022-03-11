@@ -8,4 +8,11 @@ class Home extends BaseController
     {
         return view('index');
     }
+
+    public function dashboard()
+    {
+        $datos['header'] = view('admin/template/header');
+        $datos['footer'] = view('admin/template/footer');
+        return view('admin/panel', $datos);
+    }
 }

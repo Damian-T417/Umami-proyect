@@ -8,9 +8,9 @@ class Menu extends Model{
     // Uncomment below if you want add primary key
     protected $primaryKey = 'idPlatillo';
     protected $allowedFields = [
-        'nombre',
+        'nombrePlatillo',
         'descripcion',
-        'imagen',
+        'imgPlatillo',
         'idCategoria'
     ];
 }
