@@ -50,7 +50,7 @@
                                 <td class="center">
                                     <div class="btn-group" role="group" aria-label="Second group">
                                         <a href="<?=base_url('/dashboard/menu/editar/'.$platillo['idPlatillo']);?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
-                                        <button onclick="borrarPlatillo()" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                        <button onclick="borrarPlatillo(<?=$platillo['idPlatillo'];?>)" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -66,10 +66,10 @@
 
 <script>
 
-    function borrarPlatillo()
+    function borrarPlatillo(idPlatillo)
     {
         swal({
-            title: "¿Estas seguro de borrar este platillo?",
+            title: "¿Estas seguro de borrar este platillo?" + idPlatillo,
             text: "Una vez borrado no se podra recuperar",
             icon: "warning",
             buttons: true,
@@ -81,7 +81,7 @@
                 icon: "success",
                 buttons: false,
                 });
-                window.location.href = "<?=base_url('/dashboard/menu/borrar/'.$platillo['idPlatillo']);?>";
+                window.location.href = "<?=base_url('/dashboard/menu/borrar'); ?>" +"/"+ idPlatillo;
             }
         });
     }

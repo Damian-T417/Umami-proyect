@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-            <h2 class="page-title"> <i class="fa fa-book"></i> Libros</h2>
+            <h2 class="page-title"> <i class="fa fa-book"></i> Platillos</h2>
             <div class="ms-auto text-end">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">

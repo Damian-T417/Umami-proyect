@@ -9,6 +9,8 @@ class Promociones extends Model{
     protected $primaryKey = 'idPromo';
     protected $allowedFields = [
         'nombrePromo',
+        'descripPromo',
+        'precioPromo',
         'imgPromo',
         'fechaExp'
     ];

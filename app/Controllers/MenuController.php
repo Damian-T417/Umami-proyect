@@ -144,7 +144,6 @@ class MenuController extends Controller{
 
         $platillo = new Menu();
 
-        $datosCategoria = $platillo->where('idPlatillo',$idPlatillo)->first();
         $platillo->where('idPlatillo',$idPlatillo)->delete($idPlatillo);
 
         return $this->response->redirect(site_url('/dashboard/menu'));
