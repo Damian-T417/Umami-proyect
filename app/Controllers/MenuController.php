@@ -9,7 +9,6 @@ class MenuController extends Controller{
 
     public function listar()
     {
-
         $platillos = new Menu();
         $categorias = new Categorias();
 
@@ -23,7 +22,6 @@ class MenuController extends Controller{
 
     public function crear()
     {
-
         $categorias = new Categorias();
 
         $datos['categorias'] = $categorias->orderBy('idCategoria', 'ASC')->findAll();
@@ -39,19 +37,22 @@ class MenuController extends Controller{
         $rules = [
             'nombre'      => 'required|min_length[4]|max_length[50]',
             'descripcion'     => 'required|min_length[5]|max_length[50]',
+
         ];
 
         if($this->validate($rules)){
             $platillo = new Menu();
+            $imagen=$this->request->getFile('imagen');
 
-            if($imagen=$this->request->getFile('imagen')){
+            if($imagen){
 
                 $nuevoTitulo = $imagen->getRandomName();
                 $imagen->move('../public/uploads/',$nuevoTitulo);
 
                 $datos=[
                     'nombrePlatillo'=>$this->request->getVar('nombre'),
-                    'descripcion'=>$this->request->getVar('descripcion'),
+                    'descripPlatillo'=>$this->request->getVar('descripcion'),
+                    'precioPlatillo'=>$this->request->getVar('precio'),
                     'imgPlatillo'=>$nuevoTitulo,
                     'idCategoria'=>$this->request->getVar('idCategoria')
                 ];
@@ -63,6 +64,7 @@ class MenuController extends Controller{
             }
 
         }else{
+
             $categorias = new Categorias();
 
             $datos['categorias'] = $categorias->orderBy('idCategoria', 'ASC')->findAll();
@@ -109,7 +111,8 @@ class MenuController extends Controller{
 
                 $datos=[
                     'nombrePlatillo'=>$this->request->getVar('nombre'),
-                    'descripcion'=>$this->request->getVar('descripcion'),
+                    'descripPlatillo'=>$this->request->getVar('descripcion'),
+                    'precioPlatillo'=>$this->request->getVar('precio'),
                     'imgPlatillo'=>$nuevoTitulo,
                     'idCategoria'=>$this->request->getVar('idCategoria')
                 ];
@@ -123,7 +126,9 @@ class MenuController extends Controller{
             }
         }else{
             $categorias = new Categorias();
-
+            $idPlatillo = $this->request->getVar('idPlatillo');
+            
+            $datos['platillo'] = $platillo->where('idPlatillo',$idPlatillo)->first();
             $datos['categorias'] = $categorias->orderBy('idCategoria', 'ASC')->findAll();
             $datos['validation'] = $this->validator;
 

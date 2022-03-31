@@ -9,7 +9,8 @@ class Menu extends Model{
     protected $primaryKey = 'idPlatillo';
     protected $allowedFields = [
         'nombrePlatillo',
-        'descripcion',
+        'descripPlatillo',
+        'precioPlatillo',
         'imgPlatillo',
         'idCategoria'
     ];

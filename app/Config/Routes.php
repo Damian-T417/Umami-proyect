@@ -60,6 +60,11 @@ $routes->get('/dashboard/menu/borrar/(:num)', 'MenuController::borrar/$1', ['fil
 
 //Promociones
 $routes->get('/dashboard/promociones', 'PromocionesController::listar',['filter' => 'authGuard']);
+$routes->get('/dashboard/promociones/crear', 'PromocionesController::crear', ['filter' => 'authGuard']);
+$routes->post('/dashboard/promociones/guardar', 'PromocionesController::guardar', ['filter' => 'authGuard']);
+$routes->get('/dashboard/promociones/editar/(:num)', 'PromocionesController::editar/$1', ['filter' => 'authGuard']);
+$routes->post('/dashboard/promociones/actualizar', 'PromocionesController::actualizar', ['filter' => 'authGuard']);
+$routes->get('/dashboard/promociones/borrar/(:num)', 'PromocionesController::borrar/$1', ['filter' => 'authGuard']);
 
 /*
  * --------------------------------------------------------------------

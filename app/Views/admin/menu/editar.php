@@ -25,21 +25,24 @@
                     
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" value="<?=$platillo['nombrePlatillo'];?>">
+                        <input type="text" class="form-control" name="nombre" value="<?=$platillo['nombrePlatillo'];?>" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Descripción</label>
-                        <input type="text" class="form-control" name="descripcion" value="<?=$platillo['descripcion'];?>">
+                        <input type="text" class="form-control" name="descripcion" value="<?=$platillo['descripPlatillo'];?>" required>
                     </div>
-
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Precio</label>
+                        <input type="number" class="form-control" name="precio" min="1" max="5000" value="<?=$platillo['precioPlatillo'];?>" required>
+                    </div>
                     <div class="form-group">
                         <label for="exampleFormControlFile1">Imagen</label> <br>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen" required>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Categoría</label>
-                        <select class="form-select" aria-label="Default select example" name="idCategoria">
+                        <select class="form-select" aria-label="Default select example" name="idCategoria" required>
                             <option value="" selected>Seleccione una opción</option>
                             <?php foreach($categorias as $categoria): ?>
                                 <option value="<?= $categoria['idCategoria'];?>"><?= $categoria['nombreCat'];?></option>

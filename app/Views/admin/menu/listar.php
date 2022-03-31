@@ -24,6 +24,7 @@
                                 <th scope="col" class="text-center">#</th>
                                 <th scope="col" class="text-center">Nombre</th>
                                 <th scope="col" class="text-center">Descripción</th>
+                                <th scope="col" class="text-center">Precio</th>
                                 <th scope="col" class="text-center">Imagen</th>
                                 <th scope="col" class="text-center">Categoria</th>
                                 <th class="center text-danger"><i class="fa fa-bolt"> </i></th>
@@ -34,7 +35,8 @@
                             <tr>
                             <th scope="row" class="text-center"><?=$platillo['idPlatillo'];?></th>
                                 <td><?=$platillo['nombrePlatillo'];?></td>
-                                <td><?=$platillo['descripcion'];?></td>
+                                <td><?=$platillo['descripPlatillo'];?></td>
+                                <td><?=$platillo['precioPlatillo'];?></td>
                                 <!--<td><?=$platillo['imgplatillo'];?></td>arreglar-->
                                 <td>
                                     <img src="<?=base_url()?>/uploads/<?=$platillo['imgPlatillo'];?>" width="100" alt="No existe imagen">

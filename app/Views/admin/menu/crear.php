@@ -28,20 +28,24 @@
                 <form action="<?= base_url('/dashboard/menu/guardar')?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" value="<?= old('nombre') ?>">
+                        <input type="text" class="form-control" name="nombre" value="<?= old('nombre') ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripción</label>
-                        <input type="text" class="form-control" name="descripcion" value="<?= old('descripcion') ?>">
+                        <input type="text" class="form-control" name="descripcion" value="<?= old('descripcion') ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio</label>
+                        <input type="number" class="form-control" name="precio" min="1" max="5000" value="<?= old('precio') ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="imagenPlatillo">Imagen</label> <br>
-                        <input type="file" class="form-control-file" id="imagenPlatillo" name="imagen">
+                        <input type="file" class="form-control-file" name="imagen" required>
                     </div>
 
                     <div class="form-group">
                         <label for="">Categoría</label>
-                        <select class="form-select" aria-label="Default select example" name="idCategoria">
+                        <select class="form-select" aria-label="Default select example" name="idCategoria" required>
                             <option value="" selected>Seleccione una opción</option>
                             <?php foreach($categorias as $categoria): ?>
                                 <option value="<?= $categoria['idCategoria'];?>"><?= $categoria['nombreCat']; ?></option>
@@ -49,7 +53,7 @@
                         </select>
                     </div>
                     
-                    <button class="btn btn-success rounded-pill" type="submit">Guardar  <i class="fa fa-save"></i></button>
+                    <button class="btn btn-success rounded-pill" type="submit">Guardar<i class="fa fa-save"></i></button>
                 </form>
 
             </div>
