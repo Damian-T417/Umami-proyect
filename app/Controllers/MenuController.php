@@ -127,7 +127,7 @@ class MenuController extends Controller{
         }else{
             $categorias = new Categorias();
             $idPlatillo = $this->request->getVar('idPlatillo');
-            
+
             $datos['platillo'] = $platillo->where('idPlatillo',$idPlatillo)->first();
             $datos['categorias'] = $categorias->orderBy('idCategoria', 'ASC')->findAll();
             $datos['validation'] = $this->validator;
