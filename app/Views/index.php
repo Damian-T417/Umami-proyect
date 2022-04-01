@@ -145,79 +145,23 @@
                                 </svg>
             </div>
             <!--.divider-->
+
             <div class="specials-content">
+
+            <?php foreach($promociones as $promocion): ?>
                 <div class="special">
                     <div class="special-img img-01">
-                        <img src="assets/img/special-1.png" />
+                        <img src="<?=base_url()?>/uploads/<?=$promocion['imgPromo'];?>" />
                     </div>
                     <div class="special-items spec-01">
-                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Greens fava</h2>
+                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%"><?= $promocion['nombrePromo']; ?></h2>
                         <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
-                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Nori grape silver beet broccoli kombu beet greens fava</p>
-                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">19$</span>
+                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%"><?= $promocion['descripPromo']; ?></p>
+                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">$<?= $promocion['precioPromo']; ?></span>
                     </div>
                 </div>
                 <!--.special-->
-                <div class="special">
-                    <div class="special-img img-02">
-                        <img src="assets/img/special-2.png" />
-                    </div>
-                    <div class="special-items spec-02">
-                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Celery quand</h2>
-                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
-                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Celery quandong swiss chard chicory earthnut pea</p>
-                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">18$</span>
-                    </div>
-                </div>
-                <!--.special-->
-                <div class="special">
-                    <div class="special-img img-03">
-                        <img src="assets/img/special-3.png" />
-                    </div>
-                    <div class="special-items spec-03">
-                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Pea horser</h2>
-                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
-                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Kohlrabi radish okra azuki bean corn fava bean mustard</p>
-                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">7$</span>
-                    </div>
-                </div>
-                <!--.special-->
-                <div class="special">
-                    <div class="special-items spec-04">
-                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Soko radicchio</h2>
-                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
-                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Dandelion zucchini burdock yarrow chickpea dandelion</p>
-                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">25$</span>
-                    </div>
-                    <div class="special-img img-04">
-                        <img src="assets/img/special-4.png" />
-                    </div>
-                </div>
-                <!--.special-->
-                <div class="special">
-                    <div class="special-items spec-05">
-                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Tigernut</h2>
-                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
-                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Grape silver beet watercress potato tigernut</p>
-                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">14$</span>
-                    </div>
-                    <div class="special-img img-05">
-                        <img src="assets/img/special-5.png" />
-                    </div>
-                </div>
-                <!--.special-->
-                <div class="special">
-                    <div class="special-items spec-06">
-                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Yarrow sweet</h2>
-                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
-                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Gumbo kakadu plum komatsuna black-eyed pea green</p>
-                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">8$</span>
-                    </div>
-                    <div class="special-img img-06">
-                        <img src="assets/img/special-6.png" />
-                    </div>
-                </div>
-                <!--.special-->
+            <?php endforeach; ?>
             </div>
             <!--.specials-content-->
         </div>
@@ -257,7 +201,7 @@
     <!-- This section must be dinamic -->
     <section id="main-menu" class="menu-cart scroll-reveal">
         <div class="container">
-            <h1 class="header-txt">Menu Cart</h1>
+            <h1 class="header-txt">Menú</h1>
             <div class="divider">
                 <?xml ?>
                 <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -272,7 +216,8 @@
                                 <rect x="921.9" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)" class="st0" width="95" height="95"/>
                                 <rect x="921.9" y="99.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)" class="st0" width="95" height="95"/>
                                 <rect x="940.3" y="178.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)" class="st0" width="58.2" height="58.2"/>
-                                </svg>
+                                </svg>             
+                                <h5 class="header-txt">Selecciona una categoría</h5>
             </div>
             <!--.divider-->
             <ul class="menu-navigation" data-tabs data-match-height="true" id="example-tabs">
@@ -283,7 +228,7 @@
 
             <?php endforeach; ?>
             <!--
-                <li class="tabs-title "><a class="m-anim" href="#panel1" aria-selected="true" data-text="Starters">Starters</a></li>
+                <li class="tabs-title"><a class="m-anim" href="#panel1" aria-selected="true" data-text="Starters">Starters</a></li>
                 <li class="tabs-title"><a class="m-anim" data-tabs-target="panel2" href="#panel2" data-text="Main Dishes">Main Dishes</a></li>
                 <li class="tabs-title"><a class="m-anim" data-tabs-target="panel3" href="#panel3" data-text="Desserts">Desserts</a></li>
                 <li class="tabs-title"><a class="m-anim" data-tabs-target="panel4" href="#panel4" data-text="Drinks">Drinks</a></li>
@@ -304,10 +249,10 @@
                             <table>
                                 <tr>
                                     <td><span><?= $menu['nombrePlatillo']; ?></span></td>
-                                    <td><span>$12</span></td>
+                                    <td><span>$<?=$menu['precioPlatillo']; ?></span></td>
                                 </tr>
                                 <tr>
-                                    <td><?= $menu['descripcion']; ?></td>
+                                    <td><?= $menu['descripPlatillo']; ?></td>
                                 </tr>
            
                             </table>
