@@ -15,10 +15,10 @@
 
     <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
 
-
 </head>
 
 <body>
+    
     <header class="site-header">
         <div class="container">
             <div class="header-content">
@@ -34,7 +34,7 @@
                                 <li><a class="m-active" href="#" data-text="Home">Inicio</a></li>
                                 <li><a class="m-anim" href="#specials-grid" data-text="Specials">Promociones</a></li>
                                 <li><a class="m-anim" href="#about-us" data-text="About">Nosotros</a></li>
-                                <li><a class="m-anim" href="#main-menu" data-text="Menu Cart">Nuestro menu</a></li>
+                                <li><a class="m-anim" href="#main-menu" data-text="Menu Cart">Nuestro menú</a></li>
                                 <li><a class="m-anim" href="#contact-us" data-text="Contact">Sucursal</a></li>
                             </ul>
                         </nav>
@@ -42,11 +42,12 @@
                 </div>
             </div>
         </div>
+
         <div class="slider">
             <div class="a-slide slide1">
                 <div class="container">
                     <div class="bottom-section scroll-reveal" data-origin="right" data-distance="20%">
-                        <h1 class="header-txt">Umami</h1>
+                        <h1 class="header-txt"><img src="<?= base_url('/assets/img/Logo-black.png');?>" alt="No hay logotipo"></h1>
                         <div class="divider">
                             <?xml  ?>
                             <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -69,31 +70,6 @@
                     <!--.bottom-section-->
                 </div>
             </div>
-            <div class="a-slide slide2">
-                <div class="container">
-                    <div class="bottom-section">
-                        <h1 class="header-txt">Umami 2</h1>
-                        <div class="divider">
-                            <?xml?>
-                            <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1930 255.5" style="enable-background:new 0 0 1930 255.5;" xml:space="preserve">
-                                <style type="text/css">
-                                    .st0{fill:none;stroke:#3c3c3c;stroke-width:10;stroke-linecap:square;stroke-miterlimit:10;}
-                                </style>
-                                <polyline class="st0" points="1224,171.8 1181.3,171.8 1139.2,129.6 1065,203.9 970.5,110.4 876,203.6 801.8,129.4 759.7,171.5 
-                                    717,171.5 "/>
-                                <polyline class="st0" points="5,131.5 757.3,131.5 801.8,176.1 885.9,91.9 868.3,74.2 831.5,111 870.4,149.9 970.2,50.2 1070,149.9 
-                                    1108.8,111 1072.1,74.2 1054.4,91.9 1138.5,176.1 1183.1,131.5 1925,131.5 "/>
-                                <rect x="921.9" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)" class="st0" width="95" height="95"/>
-                                <rect x="921.9" y="99.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)" class="st0" width="95" height="95"/>
-                                <rect x="940.3" y="178.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)" class="st0" width="58.2" height="58.2"/>
-                                </svg>
-                        </div>
-                        <!--.divider-->
-                    </div>
-                    <!--.bottom-section-->
-                </div>
-            </div>
 
         </div>
 
@@ -104,18 +80,27 @@
             <div class="yellow-content">
                 <div class="icon">
                     <img class="scroll-reveal" data-origin="top" data-distance="20%" src="assets/icon-vege.svg" />
-                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Texto de info</h3>
-                    <p class="scroll-reveal" data-distance="0" data-duration="500">Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage.</p>
+                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Calidad de los alimentos</h3>
+                    <p class="scroll-reveal" data-distance="0" data-duration="500">
+                        Nosotros siempre buscamos la calidad al preparar nuestros platillos para garantizar
+                        la satisfacción de nuestros clientes.
+                    </p>
                 </div>
                 <div class="icon">
                     <img class="scroll-reveal" data-origin="top" data-distance="20%" src="assets/icon-coffee.svg" />
-                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Texto de info</h3>
-                    <p class="scroll-reveal" data-distance="0" data-duration="700">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek.</p>
+                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Nuestro servicio</h3>
+                    <p class="scroll-reveal" data-distance="0" data-duration="700">
+                        Mantenemos un excelente servicio para la comodidad de nuestros clientes, logrando una
+                        atención al cliente fiable y agradable.
+                    </p>
                 </div>
                 <div class="icon">
                     <img class="scroll-reveal" data-origin="top" data-distance="20%" src="assets/icon-sweet.svg" />
-                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Texto de info</h3>
-                    <p class="scroll-reveal" data-distance="0" data-duration="900">Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama.</p>
+                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Excelente atmosfera</h3>
+                    <p class="scroll-reveal" data-distance="0" data-duration="900">
+                        Nuestro restaurante logra una atmósfera cómoda y relajante para los clientes, además que
+                        la ubicación es bastante accesible para los clientes
+                    </p>
                 </div>
             </div>
             <!--.yellow-content-->
@@ -190,7 +175,11 @@
                                 </svg>
                 </div>
                 <!--.divider-->
-                <p class="scroll-reveal" data-origin="top" data-distance="10%">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+                <p class="scroll-reveal" data-origin="top" data-distance="10%">
+                    Somos un restaurante que tiene como objetivo lograr la satisfacción de los clientes
+                    a través de nuestros platillos hechos con calidad, manteniendo una atención al 
+                    cliente buena para así lograr una buena reputación en el ambiente laboral.
+                </p>
                 <!--<img class="signature scroll-reveal" data-origin="right" data-distance="20%" src="assets/signature.png" />-->
             </div>
         </div>
@@ -217,7 +206,7 @@
                                 <rect x="921.9" y="99.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)" class="st0" width="95" height="95"/>
                                 <rect x="940.3" y="178.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)" class="st0" width="58.2" height="58.2"/>
                                 </svg>             
-                                <h5 class="header-txt">Selecciona una categoría</h5>
+                                <h5 class="header-txt">Presiona una categoría</h5>
             </div>
             <!--.divider-->
             <ul class="menu-navigation" data-tabs data-match-height="true" id="example-tabs">
@@ -237,45 +226,33 @@
 
             <div class="tabs-content" data-tabs-content="example-tabs">
 
-            <?php foreach($categorias as $categoria): ?>
+                <?php foreach($categorias as $categoria): ?>
 
-                <div class="tabs-panel" id="panel<?= $categoria['idCategoria'] ?>">
+                    <div class="tabs-panel" id="panel<?= $categoria['idCategoria'] ?>">
 
-                <?php $platillo = $platillos->where('idCategoria',$categoria['idCategoria'])->findAll(); ?>
+                    <?php $platillo = $platillos->where('idCategoria',$categoria['idCategoria'])->findAll(); ?>
 
-                <?php foreach($platillo as $menu): ?>
                     <div class="menu-content">
-                        <div class="menu-section">
-                            <table>
-                                <tr>
-                                    <td><span><?= $menu['nombrePlatillo']; ?></span></td>
-                                    <td><span>$<?=$menu['precioPlatillo']; ?></span></td>
-                                </tr>
-                                <tr>
-                                    <td><?= $menu['descripPlatillo']; ?></td>
-                                </tr>
-           
-                            </table>
+                    <?php foreach($platillo as $menu): ?>
+                            <div class="menu-section">
+                                <table>
+                                    <tr>
+                                        <td><span><?= $menu['nombrePlatillo']; ?></span></td>
+                                        <td><span>$<?=$menu['precioPlatillo']; ?></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><?= $menu['descripPlatillo']; ?></td>
+                                    </tr>
+            
+                                </table>
+                            </div>
+                            <!--.menu-section-->
+                            <?php endforeach; ?>
                         </div>
-                        <!--.menu-section-->
-                        <div class="menu-section">
-                            <table>
-                                <tr>
-                                    <td><span>SAMPHIRE FRITTERS WITH FENNEL CEVICHE </span></td>
-                                    <td><span>$19</span></td>
-                                </tr>
-                                <tr>
-                                    <td>fresh samphire, plain flour, cornflower, eggs, fennel</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <!--.menu-section-->
+                        <!--.menu-content-->
                     </div>
-                    <!--.menu-content-->
-                <?php endforeach; ?>
-                </div>
-            <?php endforeach; ?>    
-                <!--#panel1-->
+                <?php endforeach; ?>    
+                <!--panel-->
 
             </div>
         </div>
@@ -288,7 +265,7 @@
     <footer id="contact-us">
         <div class="container">
             <div class="footer-content">
-                <h1 class="header-txt scroll-reveal">Nuestra sucursal</h1>
+                <h1 class="header-txt scroll-reveal">¿Donde encontrarnos?</h1>
                 <div class="divider scroll-reveal">
                     <?xml ?>
                     <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -308,25 +285,22 @@
                 <!--.divider-->
                 <div class="contact-info scroll-reveal">
                     <div class="info-address">
-                        <h3>Veggie</h3>
-                        <p>3428 Magnolia Avenue<br>Hackettstown, NJ 07840</p>
+                        <h3>Ubicación</h3>
+                        <p>Allende Norte #21<br>Santiago de Querétaro, Querétaro, c.p 76000</p>
                     </div>
                     <div class="reservations">
-                        <h3>Reservations</h3>
-                        <p>reservations@vegggie.com<br>+48 202-555-0114</p>
+                        <h3>Contacto</h3>
+                        <p>gilbeltranmad@hotmail.com<br>+52 442 343 4700</p>
                     </div>
                 </div>
                 <!--.contact-info-->
+
                 <div class="contact-form scroll-reveal" data-origin="bottom" data-distance="20%">
-                    <h3>Contact us</h3>
-                    <form>
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="email" name="email" placeholder="Email">
-                        <textarea placeholder="Message"></textarea>
-                        <button class="send-form">Send</button>
-                    </form>
+                    <h3>Encuentranos</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9970.886592920264!2d-100.3969453448777!3d20.593668444238457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35bcadcb01419%3A0x2eb228f3b408677d!2sUmami%20Ramen%20Bar!5e0!3m2!1ses-419!2smx!4v1649190092594!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <!--.contact-form-->
+                <!--.Map-->
+                
                 <div class="social-icons scroll-reveal" data-duration="1500">
                     <div class="fb-i">
 
