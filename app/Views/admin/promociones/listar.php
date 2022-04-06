@@ -44,7 +44,7 @@
 
                                 <td class="center">
                                     <div class="btn-group" role="group" aria-label="Second group">
-                                        <button onclick="borrarPromo(<?= $promocion['idPromo'];?>)" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                        <button onclick="borrarPromo(<?= $promocion['idPromo'];?>, '<?=$promocion['nombrePromo'];?>')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -60,10 +60,10 @@
 
 <script>
 
-    function borrarPromo(idPromo)
+    function borrarPromo(idPromo, nombrePromo)
     {
         swal({
-            title: "¿Estas seguro de borrar esta promoción?" + idPromo,
+            title: "¿Estas seguro de borrar " + nombrePromo + "?",
             text: "Una vez borrado no se podra recuperar",
             icon: "warning",
             buttons: true,

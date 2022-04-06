@@ -1,7 +1,4 @@
 <?= $header ?>
-    <!-- ============================================================== -->
-    <!-- Start Page Content -->
-    <!-- ============================================================== -->
 
     <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
@@ -37,7 +34,7 @@
                                     <td class="center">
                                         <div class="btn-group" role="group" aria-label="Second group">
                                             <a href="<?=base_url('/dashboard/categorias/editar/'.$categoria['idCategoria']);?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
-                                            <a href="<?=base_url('/dashboard/categorias/borrar/'.$categoria['idCategoria']); ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                            <button onclick="borrarCategoria(<?=$categoria['idCategoria'];?>, '<?=$categoria['nombreCat'];?>')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                         </div>
                                     </td>
                             </tr>
@@ -49,3 +46,27 @@
         </div>
     </div>
 <?= $footer ?>
+
+<script>
+
+    function borrarCategoria(idCategoria, nombreCat)
+    {
+        swal({
+            title: "¿Estas seguro de borrar " + nombreCat + "?",
+            text: "Una vez borrado no se podra recuperar",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                swal("El platillo se esta borrando", {
+                icon: "success",
+                buttons: false,
+                });
+                window.location.href = "<?=base_url('/dashboard/categorias/borrar'); ?>/"+ idCategoria;
+            }
+        });
+    }
+
+</script>

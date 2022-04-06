@@ -9,6 +9,7 @@ class CategoriasController extends Controller{
     public function listar()
     {
         $categorias = new Categorias();
+
         $datos['categorias'] = $categorias->orderBy('idCategoria','ASC')->findAll();
 
         $datos['header'] = view('admin/template/header');
@@ -30,7 +31,7 @@ class CategoriasController extends Controller{
         $categoria = new categorias();
 
         $rules = $this->validate([
-            'nombreC'=>'required|min_length[4]',
+            'nombreC'=>'required|min_length[2]',
         ]);
 
         if(!$rules){
@@ -68,7 +69,7 @@ class CategoriasController extends Controller{
         $idCategoria = $this->request->getVar('idCategoria');
 
         $rules = $this->validate([
-            'nombreC'=>'required|min_length[6]',
+            'nombreC'=>'required|min_length[2]',
         ]);
         if(!$rules){
             $sessions = session();

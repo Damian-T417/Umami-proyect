@@ -36,11 +36,6 @@
                         <input type="number" class="form-control" name="precio" min="1" max="5000" value="<?=$platillo['precioPlatillo'];?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">Imagen</label> <br>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen" required>
-                    </div>
-
-                    <div class="form-group">
                         <label for="exampleFormControlInput1">Categoría</label>
                         <select class="form-select" aria-label="Default select example" name="idCategoria" required>
                             <option value="" selected>Seleccione una opción</option>

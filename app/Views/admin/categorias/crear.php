@@ -33,7 +33,7 @@
                 <form method="post" action="<?=base_url('/dashboard/categorias/guardar')?>">
                     <div class="form-group">
                         <label for="nombreC">Nombre de la Categoria</label>
-                        <input id="nombreC" value="<?=old('nombreC')?>" class="form-control" type="text" name="nombreC">
+                        <input id="nombreC" value="<?=old('nombreC')?>" class="form-control" type="text" name="nombreC" required>
                     </div>
                     <button class="btn btn-success rounded-pill" type="submit">Guardar <i class="fa fa-save"></i></button>
                 </form>      

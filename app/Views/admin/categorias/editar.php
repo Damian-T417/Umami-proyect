@@ -31,7 +31,7 @@
                         <input type="hidden" name="idCategoria" value="<?=$categoria['idCategoria']?>">
                         <div class="form-group">
                             <label for="nombre">Nombre de la Categoria</label>
-                            <input id="nombreC" value="<?=$categoria['nombreCat'];?>" class="form-control" type="text" name="nombreC">
+                            <input id="nombreC" value="<?=$categoria['nombreCat'];?>" class="form-control" type="text" name="nombreC" required>
                       </div>
                         <button class="btn btn-success rounded-pill" type="submit">Guardar <i class="fa fa-save"></i></button>
                     </form>                 

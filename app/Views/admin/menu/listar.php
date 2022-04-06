@@ -25,7 +25,6 @@
                                 <th scope="col" class="text-center">Nombre</th>
                                 <th scope="col" class="text-center">Descripción</th>
                                 <th scope="col" class="text-center">Precio</th>
-                                <th scope="col" class="text-center">Imagen</th>
                                 <th scope="col" class="text-center">Categoria</th>
                                 <th class="center text-danger"><i class="fa fa-bolt"> </i></th>
                             </tr>
@@ -37,10 +36,6 @@
                                 <td><?=$platillo['nombrePlatillo'];?></td>
                                 <td><?=$platillo['descripPlatillo'];?></td>
                                 <td><?=$platillo['precioPlatillo'];?></td>
-                                <!--<td><?=$platillo['imgplatillo'];?></td>arreglar-->
-                                <td>
-                                    <img src="<?=base_url()?>/uploads/<?=$platillo['imgPlatillo'];?>" width="100" alt="No existe imagen">
-                                </td>
 
                                 <!--  ¿Solución definitiva?   -->
                                 <?php $categoria = $categorias->where('idCategoria',$platillo['idCategoria'])->first();?>
@@ -50,7 +45,7 @@
                                 <td class="center">
                                     <div class="btn-group" role="group" aria-label="Second group">
                                         <a href="<?=base_url('/dashboard/menu/editar/'.$platillo['idPlatillo']);?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
-                                        <button onclick="borrarPlatillo(<?=$platillo['idPlatillo'];?>)" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                                        <button onclick="borrarPlatillo(<?=$platillo['idPlatillo'];?>, '<?=$platillo['nombrePlatillo'];?>')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -66,10 +61,10 @@
 
 <script>
 
-    function borrarPlatillo(idPlatillo)
+    function borrarPlatillo(idPlatillo, nombrePlatillo)
     {
         swal({
-            title: "¿Estas seguro de borrar este platillo?" + idPlatillo,
+            title: "¿Estas seguro de borrar " + nombrePlatillo +"?",
             text: "Una vez borrado no se podra recuperar",
             icon: "warning",
             buttons: true,

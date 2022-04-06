@@ -11,7 +11,6 @@ class Menu extends Model{
         'nombrePlatillo',
         'descripPlatillo',
         'precioPlatillo',
-        'imgPlatillo',
         'idCategoria'
     ];
 }
