@@ -47,7 +47,7 @@
             <div class="a-slide slide1">
                 <div class="container">
                     <div class="bottom-section scroll-reveal" data-origin="right" data-distance="20%">
-                        <h1 class="header-txt"><img src="<?= base_url('/assets/img/Logo-black.png');?>" alt="No hay logotipo"></h1>
+                        <h1 class="header-txt"><img src="<?= base_url('assets/img/Logo-black.png');?>" alt="No hay logotipo"></h1>
                         <div class="divider">
                             <?xml  ?>
                             <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->

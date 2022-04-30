@@ -61,7 +61,8 @@ class CategoriasController extends Controller{
         return view('admin/categorias/editar', $datos);
     }
 
-    public function actualizar(){
+    public function actualizar()
+    {
         $categoria = new categorias();
         $datos = [
             'nombreCat'=>$this->request->getVar('nombreC'),
@@ -84,7 +85,8 @@ class CategoriasController extends Controller{
         return $this->response->redirect(site_url('/dashboard/categorias'));
     }
 
-    public function borrar($idCategoria=null){
+    public function borrar($idCategoria=null)
+    {
         $categoria = new categorias();
         $datosCategoria = $categoria->where('idCategoria',$idCategoria)->first();
         

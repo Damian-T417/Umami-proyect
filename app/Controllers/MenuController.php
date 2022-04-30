@@ -37,7 +37,6 @@ class MenuController extends Controller{
         $rules = [
             'nombre'      => 'required|min_length[4]|max_length[50]',
             'descripcion'     => 'required|min_length[5]|max_length[500]',
-
         ];
 
         if($this->validate($rules)){
@@ -49,12 +48,10 @@ class MenuController extends Controller{
                 'precioPlatillo'=>$this->request->getVar('precio'),
                 'idCategoria'=>$this->request->getVar('idCategoria')
             ];
-
             $platillo->insert($datos);
             return $this->response->redirect(base_url('/dashboard/menu'));
 
         }else{
-
             $categorias = new Categorias();
 
             $datos['categorias'] = $categorias->orderBy('idCategoria', 'ASC')->findAll();
@@ -62,10 +59,8 @@ class MenuController extends Controller{
 
             $datos['header'] = view('admin/template/header');
             $datos['footer'] = view('admin/template/footer');
-
             return view('admin/menu/crear', $datos);
         }
-
     }
 
     public function editar($idPlatillo)
@@ -90,7 +85,6 @@ class MenuController extends Controller{
             'nombre'      => 'required|min_length[4]|max_length[50]',
             'descripcion'     => 'required|min_length[5]|max_length[500]',
         ];
-
         if($this->validate($rules)){
             $platillo = new Menu();
 
@@ -100,22 +94,19 @@ class MenuController extends Controller{
                 'precioPlatillo'=>$this->request->getVar('precio'),
                 'idCategoria'=>$this->request->getVar('idCategoria')
             ];
-
             $idPlatillo = $this->request->getVar('idPlatillo');
             $platillo->update($idPlatillo, $datos);
 
             return $this->response->redirect(base_url('/dashboard/menu'));
         }else{
             $categorias = new Categorias();
-            $idPlatillo = $this->request->getVar('idPlatillo');
 
+            $idPlatillo = $this->request->getVar('idPlatillo');
             $datos['platillo'] = $platillo->where('idPlatillo',$idPlatillo)->first();
             $datos['categorias'] = $categorias->orderBy('idCategoria', 'ASC')->findAll();
             $datos['validation'] = $this->validator;
-
             $datos['header'] = view('admin/template/header');
             $datos['footer'] = view('admin/template/footer');
-
             return view('admin/menu/editar/'.$idPlatillo, $datos);
         }
     }
